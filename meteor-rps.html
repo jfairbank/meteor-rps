@@ -1,27 +1,27 @@
 <head>
-  <title>Todo List</title>
+  <title>Giveaway</title>
 </head>
 
 <body>
 
-<form class="new-task">
-  <input type="text" name="text" placeholder="Type to add new tasks" />
+<form class="new-people">
+  <input type="text" name="text" placeholder="Type to add new people" />
 </form>
 
 
   <div class="container">
     <header>
-      <h1>Todo List</h1>
+      <h1>Contestants</h1>
     </header>
 
     <ul>
-      {{#each tasks}}
-      {{> task}}
+      {{#each peoples}}
+      {{> people}}
       {{/each}}
     </ul>
   </div>
 </body>
 
-<template name="task">
+<template name="people">
   <li>{{text}}</li>
 </template>

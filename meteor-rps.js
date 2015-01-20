@@ -1,20 +1,19 @@
-Tasks = new Mongo.Collection("tasks");
+Peoples = new Mongo.Collection("peoples");
 
 if (Meteor.isClient) {
   // This code only runs on the client
   Template.body.helpers({
-    tasks: function () {
-      return Tasks.find({});
+    peoples: function () {
+      return Peoples.find({});
     }
   });
 
   Template.body.events({
-    "submit .new-task": function (event) {
-      // This function is called when the new task form is submitted
+    "submit .new-people": function (event) {
 
       var text = event.target.text.value;
 
-      Tasks.insert({
+      Peoples.insert({
         text: text,
         createdAt: new Date() // current time
       });
